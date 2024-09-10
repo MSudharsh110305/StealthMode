@@ -1,1 +1,1 @@
-# StealthMode.
+# This repository serves as a backup for the Rally computer, aimed at enhancing its structural integrity, expanding its functional capabilities, and streamlining its workflow for a more dynamic experience.
