@@ -1,7 +1,25 @@
-#ifndef SENDDATA_H
-#define SENDDATA_H
+#include "sending.h"
 
-#include <Arduino.h>
+String sendData(String command, const int timeout, boolean debug) {
+    String response = "";
+    Serial1.println(command);
+
+    long int startTime = millis();
+    while (millis() - startTime < timeout) {
+        while (Serial1.available()) {
+            char c = Serial1.read();
+            response += c;
+        }
+    }
+
+    if (debug) {
+        SerialUSB.print(command);
+        SerialUSB.print(" Response: ");
+        SerialUSB.println(response);
+    }
+
+    return response;
+}
 
 bool sendHTTPRequest(String url, String jsonPayload, bool breath) {
     if (breath) {
@@ -30,5 +48,3 @@ bool sendHTTPRequest(String url, String jsonPayload, bool breath) {
         return true;
     }
 }
-
-#endif
