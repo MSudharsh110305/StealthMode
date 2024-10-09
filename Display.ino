@@ -1,3 +1,14 @@
+/* 
+
+THIS code is just for an UI for the OLED screen that has 1+4 pages: 
+1. splash screen
+2. speed and distance
+3. lap timings
+4. overall results
+`
+
+*/
+
 #include <SPI.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>
