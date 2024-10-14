@@ -29,7 +29,7 @@ const float MAX_VOLTAGE = 4.2;
 const float MIN_VOLTAGE = 3.0;
 const int NUM_READINGS = 10;
 
-#define PHONE_NUMBER "8637447158"
+#define PHONE_NUMBER "9944546840"
 
 bool blinkState = false;
 unsigned long lastBlinkTime = 0;
