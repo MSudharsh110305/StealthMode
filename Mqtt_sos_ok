@@ -10,22 +10,22 @@
 #define LTE_FLIGHT_PIN 7
 
 // Switch pins
-const int switch1Pin = 3;
-const int switch2Pin = 2;
+const int switch1Pin = 8;
+const int switch2Pin = 3;
 
 // Flags for button presses
-volatile bool sosPressed = false;  // Set to true for testing SOS output
+volatile bool sosPressed = false;
 volatile bool okPressed = false;
 volatile bool sendingMessage = false;
 
 // APN and MQTT credentials
 const char apn[] = "airtelgprs.com";
-const char broker[] = "test.mosquitto.org";
+const char broker[] = "35.200.163.26";
 const int brokerPort = 1883;
 
-const char topicTracking[] = "Blueband/tracking/nmea";
-const char topicSOS[] = "Blueband/sos";
-const char topicOK[] = "Blueband/ok";
+const char topicTracking[] = "sim7600/nmea";
+const char topicSOS[] = "sim7600/sos";
+const char topicOK[] = "sim7600/ok";
 
 // Intervals
 const unsigned long trackSendInterval = 1500; // 1.5 seconds
